@@ -11,6 +11,7 @@ require_once APP_PATH . 'Controller.php';
 require_once APP_PATH . 'Model.php';
 require_once APP_PATH . 'View.php';
 require_once APP_PATH . 'Registro.php';
+require_once APP_PATH . 'Database.php';
 
 try{
     Bootstrap::run(new Request);
@@ -18,9 +19,5 @@ try{
 catch(Exception $e){
     echo $e->getMessage();
 }
-
-
-
-
 
 ?>

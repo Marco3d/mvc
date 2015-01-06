@@ -1,5 +1,6 @@
 <?php
 
+
 class Request
 {
     private $_controlador;
@@ -12,11 +13,9 @@ class Request
             $url = explode('/', $url);
             $url = array_filter($url);
             
-            $this->_controlador = strtolower(array_shift($url)); 
+            $this->_controlador = strtolower(array_shift($url));
             $this->_metodo = strtolower(array_shift($url));
             $this->_argumentos = $url;
-
-            // strtolower pone todo en minuscula
         }       
         
         if(!$this->_controlador){
@@ -47,4 +46,5 @@ class Request
         return $this->_argumentos;
     }
 }
+
 ?>
